@@ -1,15 +1,15 @@
 # filepath: /home/manuelcastiblan/academic/mlflow-deploy/mlflow-deploy/Makefile
-.PHONY: install train validate clean
+	.PHONY: install train validate clean
 
-install:
-	pip install -r requirements.txt
+	install:
+		pip install -r requirements.txt
 
-train:
-	python train.py
+	train:
+		python train.py
 
-validate:
-	python validate.py
+	validate:
+		python validate.py
 
-clean:
-	rm -rf mlruns/
-	rm -f model.pkl
+	clean:
+		rm -rf mlruns/
+		rm -f model.pkl
