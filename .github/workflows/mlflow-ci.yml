@@ -3,6 +3,13 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    
+# Definir variables de entorno globales
+env:
+  PYTHON_VERSION: '3.9'
+  # Forzar encoding UTF-8 para evitar problemas con caracteres especiales
+  PYTHONIOENCODING: 'utf-8'
+
 jobs:
   train-and-validate:
     runs-on: ubuntu-latest
