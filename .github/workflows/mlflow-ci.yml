@@ -25,7 +25,7 @@ jobs:
           pip install -r requirements.txt
       - name: Entrenar modelo
         run: |
-          mkdir -p ruta/mlruns
+          mkdir -p mlruns
           python src/train.py
       - name: Validar modelo
         run: |
@@ -34,4 +34,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mlruns
-          path: ruta/mlruns
+          path: mlruns
