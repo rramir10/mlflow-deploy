@@ -5,10 +5,10 @@
 	  pip install -r requirements.txt
 
 	train:
-	  python train.py
+	  python src/train.py
 
 	validate:
-	  python validate.py
+	  python src/validate.py
 
 	clean:
 	  rm -rf mlruns/
