@@ -101,7 +101,15 @@ try:
             sk_model=model,
             artifact_path="model"
         )
-        print(f"✅ Modelo registrado correctamente. MSE: {mse:.4f}")
+        # ✅ GUARDA EL MODELO COMO .PKL
+    def save_model_as_pkl(model):
+        model_path = "model.pkl"
+        joblib.dump(model, model_path)
+        print(f"   ✓ Modelo guardado en: {os.path.abspath(model_path)}")
+
+        save_model_as_pkl(model)
+
+    print(f"✅ Modelo registrado correctamente. MSE: {mse:.4f}")
 
 except Exception as e:
     print(f"\n--- ERROR durante la ejecución de MLflow ---")
